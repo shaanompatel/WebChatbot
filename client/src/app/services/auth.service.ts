@@ -12,7 +12,7 @@ export class AuthService {
   	private http:HttpClient
   ) { }
 
-  server_address = "http://lapro.pythonanywhere.com/";
+  server_address = "https://lapro.pythonanywhere.com/";
 
   send_post_request(data){
   	return this.http.post(
