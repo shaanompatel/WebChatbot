@@ -1,22 +1,12 @@
-<div class="user">
-<mat-card id="top">	
-	<mat-card-content>
-	<textarea readonly rows=29 id="output"> Yoooooo
-</textarea>
-	</mat-card-content>
-</mat-card>
-
-<br>
 
 <mat-card>
 	<mat-card-content>
-		<mat-progress-bar mode="indeterminate"></mat-progress-bar>
-		<form [formGroup]="form" (keydown.enter)="submit()">
+	<form [formGroup]="form">
         	<div class="example-container">
 			<br>
 			<mat-form-field color="primary" appearance="fill">
                         	<mat-label>Type Here</mat-label>
-				<textarea matInput formControlName="body" id="input"></textarea>
+				<textarea matInput formControlName="body"></textarea>
                		 </mat-form-field>
 
         	</div>
@@ -29,4 +19,3 @@
 		<button mat-raised-button color="accent" type="submit" (click)="get()">Get</button>
 	</mat-card-actions>
 </mat-card>
-</div>

@@ -1,0 +1,21 @@
+.user {
+	width:80%;
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+}
+
+#output {
+	width: 95%;
+	height: 85%;
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: center;
+	background-color: lightblue;
+}
+
+#top {
+	height: 60%;
+}
