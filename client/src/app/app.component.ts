@@ -45,7 +45,7 @@ export class AppComponent {
 		(response) => {
 			console.log('fetching');
 			console.log(response);
-			this.textbox = response[0].resp;
+			this.textbox = response.resp;
 			(document.getElementById("output") as HTMLInputElement).value = this.textbox;
 		}
 	 );
