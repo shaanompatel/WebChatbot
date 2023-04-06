@@ -3,6 +3,7 @@
 	display: table;
 	margin-right: auto;
 	margin-left: auto;
+	padding-top: 20px;
 	height: 100%;
 }
 
@@ -17,5 +18,10 @@
 }
 
 #top {
-	height: 60%;
+	height: 60%;;
+}
+
+.container {
+	background-color: AliceBlue;
+	height: 105%;
 }
