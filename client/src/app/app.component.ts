@@ -44,14 +44,11 @@ export class AppComponent {
 	 .subscribe(
 		(response) => {
 			console.log('fetching');
-			console.log(typeof response);
-			console.log(response[0][1]);
-
-			this.textbox = JSON.stringify(response);
-			
+			console.log(response);
+			this.textbox = response[0].resp;
+			(document.getElementById("output") as HTMLInputElement).value = this.textbox;
 		}
 	 );
-	 (document.getElementById("output") as HTMLInputElement).value = this.textbox;
 	 this.mode = 'determinate';
   }  
 }
