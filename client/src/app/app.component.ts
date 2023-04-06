@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from './services/auth.service';
+import {ProgressBarMode} from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,9 @@ import { AuthService } from './services/auth.service';
 export class AppComponent {
   title = 'client';
   form: FormGroup;
-  textbox = "";
+  textbox = "default";
+  mode: ProgressBarMode = 'determinate';
+  value = 100;
 
   constructor(
   	private fb:FormBuilder,
@@ -25,6 +28,7 @@ export class AppComponent {
   }
 
   submit(){
+	this.mode = 'indeterminate';
 	console.log(this.form.value);
 	this.auth.send_post_request(
 		this.form.value
@@ -40,11 +44,14 @@ export class AppComponent {
 	 .subscribe(
 		(response) => {
 			console.log('fetching');
-			console.log(response);
+			console.log(typeof response);
+			console.log(response[0][1]);
+
 			this.textbox = JSON.stringify(response);
 			
 		}
 	 );
 	 (document.getElementById("output") as HTMLInputElement).value = this.textbox;
+	 this.mode = 'determinate';
   }  
 }
