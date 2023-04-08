@@ -1,1 +1,1 @@
-ng serve --host 10.0.153.254
+ng serve --host 192.168.64.19 --ssl

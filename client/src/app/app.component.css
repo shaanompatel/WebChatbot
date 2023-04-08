@@ -10,6 +10,7 @@
 #output {
 	width: 95%;
 	height: 85%;
+	overflow-y: scroll;
 	display: table;
 	margin-right: auto;
 	margin-left: auto;

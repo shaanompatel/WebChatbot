@@ -13,6 +13,7 @@ export class AuthService {
   ) { }
 
   server_address = "https://lapro.pythonanywhere.com/";
+  //server_address = "https://server-shaanompatel.vercel.app/json";
 
   send_post_request(data){
   	return this.http.post(
